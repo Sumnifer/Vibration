@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>TerraQuake | Builders</title>
+    <link rel="stylesheet" href="assets/sass/sections/project_section.sass" />
+  </head>
+
+  <body id="body">
+    <section
+      class="contact sticky top left bg-col-1 w-100 none flex-column"
+      id="contact"
+    >
+      <i
+        class="fa-thin fa-xmark contact__close flex-as-e bg-col-1 font-col-2 font-500 font-s pointer"
+        id="contact__close_btn"
+      >
+        Fermer</i
+      >
+      <div class="contact__container grid" id="contact__container">
+        <div class="contact__container_left bg-cover bg-center bg-repeat relative font-col-2 flex flex-column h-100">
+          <div class="contact__container_left_contact flex flex-column flex-jc-sb h-100">
+            <h3 class="contact__container_left_contact_title t-center font-l font-600">
+              Informations <br />
+              de contact
+            </h3>
+            <div class="contact__container_left_contact_container">
+              <p class="contact__container_left_contact_container_paragraph flex flex-ai-c bg-col-1 font-col-2 font-s">
+                <i
+                  class="fa-solid fa-envelope contact__container_left_contact_container_paragraph_icon font-s"
+                ></i>
+                terraquakebuilder@contact.com
+              </p>
+              <p class="contact__container_left_contact_container_paragraph flex flex-ai-c bg-col-1 font-col-2 font-s">
+                <i
+                  class="fa-solid fa-mobile contact__container_left_contact_container_paragraph_icon font-s"
+                ></i>
+                +33 2 99 34 56 78
+              </p>
+              <p class="contact__container_left_contact_container_paragraph flex flex-ai-c bg-col-1 font-col-2 font-s">
+                <i
+                  class="fa-solid fa-house contact__container_left_contact_container_paragraph_icon font-s"
+                ></i>
+                <span
+                  class="contact__container_left_contact_container_paragraph_span"
+                >
+                  TerraQuake Builders <br />
+                  37 Rue de la Croix D'Or<br />
+                  CS 50001<br />
+                  35000 Rennes</span
+                >
+              </p>
+            </div>
+            <div class="contact__container_left_contact_social flex flex-ai-b font-s">
+              <i
+                class="fa-brands fa-facebook-f contact__container_left_contact_social_icon bg-col-1 font-col-2 grid place aspect pointer"
+              ></i>
+              <i
+                class="fa-brands fa-twitter contact__container_left_contact_social_icon bg-col-1 font-col-2 grid place aspect pointer"
+              ></i>
+              <i
+                class="fa-brands fa-instagram contact__container_left_contact_social_icon bg-col-1 font-col-2 grid place aspect pointer"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin-in contact__container_left_contact_social_icon bg-col-1 font-col-2 grid place aspect pointer"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div class="contact__container_right grid bg-col-1">
+          <div class="contact__container_right_bloc flex flex-column w-100">
+            <label for="name" class="contact__container_right_bloc_label font-uppercase font-col-2"
+              >Nom
+              <sup
+                ><i
+                  class="fa-solid fa-asterisk contact__container_right_bloc_label_asterisk"
+                ></i></sup
+            ></label>
+            <input
+              class="contact__container_right_bloc_input bg-col-1 font-col-2 block relative w-100"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Entrez votre nom"
+            />
+          </div>
+          <div class="contact__container_right_bloc flex flex-column w-100">
+            <label for="surname" class="contact__container_right_bloc_label font-uppercase font-col-2"
+              >Prénom
+              <sup
+                ><i
+                  class="fa-solid fa-asterisk contact__container_right_bloc_label_asterisk"
+                ></i></sup
+            ></label>
+            <input
+              class="contact__container_right_bloc_input bg-col-1 font-col-2 block relative w-100"
+              type="text"
+              name="surname"
+              id="surname"
+              placeholder="Entrez votre prénom"
+            />
+          </div>
+          <div class="contact__container_right_bloc flex flex-column w-100">
+            <label for="email" class="contact__container_right_bloc_label font-uppercase font-col-2"
+              >Adresse email
+              <sup
+                ><i
+                  class="fa-solid fa-asterisk contact__container_right_bloc_label_asterisk"
+                ></i></sup
+            ></label>
+            <input
+              class="contact__container_right_bloc_input bg-col-1 font-col-2 block relative w-100"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Votre adresse email"
+            />
+          </div>
+          <div class="contact__container_right_bloc flex flex-column w-100">
+            <label for="message" class="contact__container_right_bloc_label font-uppercase font-col-2"
+              >Message
+              <sup
+                ><i
+                  class="fa-solid fa-asterisk contact__container_right_bloc_label_asterisk"
+                ></i></sup
+            ></label>
+            <input
+              type="textarea"
+              class="contact__container_right_bloc_message bg-col-1 font-col-2 w-100"
+              name="message"
+              id="message"
+              placeholder="Votre message..."
+            />
+          </div>
+          <div class="contact__container_right_bloc flex flex-column w-100">
+            <button class="contact__container_right_bloc_cta bg-col-1 font-col-2 font-uppercase pointer flex flex-ai-c relative over" id="send">
+              Valider
+              <i
+                class="fa-thin fa-check contact__container_right_bloc_cta_icon"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="contact__confirmation" id="contact__confirmation">
+        <p class="contact__confirmation_paragraph">
+          Merci d'avoir pris le temps de nous contacter.
+        </p>
+        <p class="contact__confirmation_paragraph">
+          Nous avons bien reçu votre message et nous vous répondrons dans les
+          plus brefs délais. Nous sommes ravis de pouvoir vous aider et nous
+          nous engageons à vous fournir une réponse rapide et efficace. Si vous
+          avez des questions supplémentaires, n'hésitez pas à nous contacter à
+          nouveau ou à explorer notre site pour plus d'informations.
+        </p>
+        <button
+          class="contact__confirmation_cta"
+          id="contact__confirmation_cta"
+        >
+          Fermer la fenêtre
+        </button>
+      </div>
+    </section>
+    <a href="#top" class="top_top_button">
+      <i class="fa-regular fa-arrow-up-from-bracket"></i>
+      To Top
+    </a>
+    <header class="header auto relative over" id="header">
+      <nav
+        class="header__nav bg-col-1 aboslute top left w-100 flex flex-jc-sb flex-ai-c"
+      >
+        <h1>
+          <a href="#" class="header__nav_logo font-col-2 font-600"
+            >TerraQuake <span class="header_nav_logo_span">| Builders</span></a
+          >
+        </h1>
+        <menu class="header__nav_navbar flex flex-ai-c" id="navbar">
+          <li
+            class="header__nav_navbar_items font-col-2 font-m flex flex-ai-c flex-jc-c relative over h-100"
+          >
+            <i
+              class="fa-regular fa-house-chimney header__nav_navbar_items_icon none"
+            ></i
+            ><a
+              href="#header"
+              class="header__nav_navbar_items_link font-col-2 font-m font-500 relative over"
+              >Accueil</a
+            >
+          </li>
+          <li
+            class="header__nav_navbar_items font-col-2 font-m flex flex-ai-c flex-jc-c relative over h-100"
+          >
+            <i
+              class="fa-regular fa-address-card header__nav_navbar_items_icon none"
+            ></i
+            ><a
+              href="#about"
+              class="header__nav_navbar_items_link font-col-2 font-m font-500 relative over"
+              >A Propos</a
+            >
+          </li>
+          <li
+            class="header__nav_navbar_items font-col-2 font-m flex flex-ai-c flex-jc-c relative over h-100"
+          >
+            <i
+              class="fa-regular fa-handshake header__nav_navbar_items_icon none"
+            ></i
+            ><a
+              href="#prestations"
+              class="header__nav_navbar_items_link font-col-2 font-m font-500 relative over"
+              >Prestations</a
+            >
+          </li>
+          <li
+            class="header__nav_navbar_items font-col-2 font-m flex flex-ai-c flex-jc-c relative over h-100"
+          >
+            <i
+              class="fa-regular fa-trophy header__nav_navbar_items_icon none"
+            ></i
+            ><a
+              href="#realisations"
+              class="header__nav_navbar_items_link font-col-2 font-m font-500 relative over"
+              >Realisations</a
+            >
+          </li>
+          <li
+            class="header__nav_navbar_items font-col-2 font-m flex flex-ai-c flex-jc-c relative over h-100"
+          >
+            <i
+              class="fa-regular fa-diagram-project header__nav_navbar_items_icon none"
+            ></i
+            ><a
+              href="#project"
+              class="header__nav_navbar_items_link font-col-2 font-m font-500 relative over"
+              >Projets</a
+            >
+          </li>
+          <li
+            class="header__nav_navbar_contact font-col-2"
+            id="header_contact_btn"
+          >
+            <a href="#" class="header__nav_navbar_contact_contact font-col-2"
+              ><i
+                class="fa-thin fa-envelope header__nav_navbar_contact_contact_icon font-col-2"
+              ></i
+            ></a>
+          </li>
+        </menu>
+        <div
+          class="header__nav_icons none flex-column flex-jc-c flex-ai-c pointer aspect"
+          id="burger_menu"
+        >
+          <span class="header__nav_icons_items bg-col-2"></span>
+          <span class="header__nav_icons_items bg-col-2"></span>
+          <span class="header__nav_icons_items bg-col-2"></span>
+        </div>
+      </nav>
+      <div
+        class="header__content bg-cover bg-repeat bg-center w-100 relative over"
+      >
+        <h2 class="header__content_title t-left font-xxl font-600 font-col-2">
+          Ensemble, protégeons votre avenir en construisant.
+        </h2>
+        <p class="header__content_paragraph font-col-2 t-justify">
+          TerraQuake Builders assure votre sécurité en construisant des
+          bâtiments parasismiques. Investissez dans notre expertise.
+        </p>
+        <a
+          href="#"
+          class="header__content_cta bg-col-1 font-col-2 font-600 font-uppercase font-sm"
+          id="header__content_cta"
+          >Contact Us</a
+        >
+      </div>
+    </header>
+
+    <section class="about flex flex-ai-c font-col-2" id="about">
+      <div class="about__container">
+        <h2 class="about__container_title font-xxl font-600 relative">
+          À propos.
+        </h2>
+        <p class="about__container_paragraph t-justify font-m">
+          TerraQuake Builders est une entreprise experte en construction de
+          bâtiments parasismiques résidentiels, commerciaux et industriels, avec
+          plus de 20 ans d'expérience. Notre équipe d'experts en ingénierie, en
+          architecture et en construction utilise les dernières technologies et
+          techniques pour garantir la qualité, la sécurité et la durabilité de
+          nos bâtiments. Chez TerraQuake Builders, la sécurité est notre
+          priorité absolue.
+        </p>
+      </div>
+
+      <div class="about__img_container w-50 relative">
+        <img
+          src="assets/img/pngegg(2).png"
+          alt="Image architecture"
+          class="about__img_container_img cover auto w-100"
+        />
+      </div>
+    </section>
+    <section class="prestations font-col-2" id="prestations">
+      <div class="prestations__container w-100">
+        <div class="prestations__container_bloc w-100 t-left margin--mb">
+          <h2
+            class="prestations__container_bloc_title t-center font-xxl font-600 relative"
+          >
+            Ce que nous faisons.
+          </h2>
+          <p class="prestations__container_bloc_paragraph t-center font-m">
+            Nous offrons des bâtiments innovants, de qualité exceptionnelle et à
+            la pointe de la technologie.
+          </p>
+        </div>
+        <div class="prestations__container_cards w-100 grid grid--gc t-center">
+          <div
+            class="prestations__container_cards_card bg-col-2 relative pointer over font-col-1"
+          >
+            <div class="prestations__container_cards_card_container">
+              <img
+                src="assets/img/card1.webp"
+                alt=""
+                class="prestations__container_cards_card_container_img w-100 cover"
+              />
+              <span
+                class="prestations__container_cards_card_container_span"
+              ></span>
+              <p
+                class="prestations__container_cards_card_container_paragraph t-justify font-s font-500"
+              >
+                Nous sommes spécialisés dans la réalisation de projets de
+                construction complexes, alliant innovation et qualité
+                supérieure. Notre expertise nous permet de répondre aux besoins
+                les plus spécifiques de nos clients tout en garantissant une
+                satisfaction optimale.
+              </p>
+            </div>
+          </div>
+          <div
+            class="prestations__container_cards_card bg-col-2 relative pointer over font-col-1"
+          >
+            <div class="prestations__container_cards_card_container">
+              <img
+                src="assets/img/card3.webp"
+                alt=""
+                class="prestations__container_cards_card_container_img w-100 cover"
+              />
+              <p
+                class="prestations__container_cards_card_container_paragraph t-justify font-s font-500"
+              >
+                Notre entreprise est habilitée à délivrer des certifications
+                pour attester de la résistance sismique des bâtiments. Nous
+                mettons notre expertise à votre disposition pour garantir la
+                sécurité et la fiabilité de vos constructions face aux risques
+                sismiques.
+              </p>
+            </div>
+          </div>
+          <div
+            class="prestations__container_cards_card bg-col-2 relative pointer over font-col-1"
+          >
+            <div class="prestations__container_cards_card_container">
+              <img
+                src="assets/img/card4.webp"
+                alt=""
+                class="prestations__container_cards_card_container_img w-100 cover"
+              />
+
+              <p
+                class="prestations__container_cards_card_container_paragraph t-justify font-s font-500"
+              >
+                Notre entreprise conçoit des designs innovants pour des
+                bâtiments esthétiques et fonctionnels, en prenant en compte les
+                besoins de nos clients pour créer des espaces uniques et adaptés
+                à leur usage. Avec notre expertise en matière de conception
+                architecturale, nous garantissons des normes de qualité strictes
+                et une expérience utilisateur optimale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="carrousel" id="realisations">
+      <h2
+        class="carrousel__title t-center font-xl font-col-2 relative font-600"
+      >
+        Nos réalisations.
+      </h2>
+      <div class="carrousel__container flex flex-ai-c flex-jc-sb">
+        <div
+          class="carrousel__container_item bg-center bg-cover bg-repeat t-center w-20 relative over"
+        >
+          <div class="carrousel__container_item_container w-100 t-left bottom left absolute font-col-2">
+            <h3 class="carrousel__container_item_container_title font-col-2 font-700 flex flex-ai-c flex-jc-sb">
+              <span class="carrousel__container_item_container_title_span"
+                >TerraTower</span
+              ><i
+                class="fa-light fa-circle-info carrousel__container_item_container_title_icon"
+                id="btn1"
+              ></i>
+            </h3>
+            <p
+              class="carrousel__container_item_container_paragraph"
+              id="paragraph1"
+            >
+              Type de bâtiment : Immeuble de bureau<br />
+              Emplacement : New York City<br />
+              Cabinet d'architecte : TerraQuake Builders<br />
+              Nombre d'étages : 28<br />
+            </p>
+          </div>
+        </div>
+        <div
+          class="carrousel__container_item bg-center bg-cover bg-repeat t-center w-20 relative over"
+        >
+          <div
+            class="carrousel__container_item_container w-100 t-left bottom left absolute font-col-2"
+          >
+            <h3
+              class="carrousel__container_item_container_title font-col-2 font-700 flex flex-ai-c flex-jc-sb"
+            >
+              <span class="carrousel__container_item_container_title_span"
+                >Skyline Residences</span
+              ><i
+                class="fa-light fa-circle-info carrousel__container_item_container_title_icon none pointer font-m"
+                id="btn2"
+              ></i>
+            </h3>
+            <p
+              class="carrousel__container_item_container_paragraph"
+              id="paragraph2"
+            >
+              Type de bâtiment : Immeuble d'habitation<br />
+              Emplacement : Los Angeles<br />
+              Cabinet d'architecte : S&amp;S Architects<br />
+              Nombre d'étages : 25
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="carrousel__container_item bg-center bg-cover bg-repeat t-center w-20 relative over"
+        >
+          <div
+            class="carrousel__container_item_container w-100 t-left bottom left absolute font-col-2"
+          >
+            <h3
+              class="carrousel__container_item_container_title font-col-2 font-700 flex flex-ai-c flex-jc-sb"
+            >
+              <span class="carrousel__container_item_container_title_span"
+                >Oceanic Plaza</span
+              ><i
+                class="fa-light fa-circle-info carrousel__container_item_container_title_icon none pointer font-m"
+                id="btn3"
+              ></i>
+            </h3>
+            <p
+              class="carrousel__container_item_container_paragraph"
+              id="paragraph3"
+            >
+              Type de bâtiment : Immeuble commercial<br />
+              Emplacement : Miami<br />
+              Cabinet d'architecte : Johnson &amp; Smith Architects<br />
+              Nombre d'étages : 22
+            </p>
+          </div>
+        </div>
+        <div
+          class="carrousel__container_item bg-center bg-cover bg-repeat t-center w-20 relative over"
+        >
+          <div
+            class="carrousel__container_item_container w-100 t-left bottom left absolute font-col-2"
+          >
+            <h3
+              class="carrousel__container_item_container_title font-col-2 font-700 flex flex-ai-c flex-jc-sb"
+            >
+              <span class="carrousel__container_item_container_title_span"
+                >Parkview Heights</span
+              ><i
+                class="fa-light fa-circle-info carrousel__container_item_container_title_icon none pointer font-m"
+                id="btn4"
+              ></i>
+            </h3>
+            <p
+              class="carrousel__container_item_container_paragraph"
+              id="paragraph4"
+            >
+              Type de bâtiment : Immeuble d'habitation<br />
+              Emplacement : San Francisco<br />
+              Cabinet d'architecte : Lee &amp; Lee Architects<br />
+              Nombre d'étages : 15
+            </p>
+          </div>
+        </div>
+        <div
+          class="carrousel__container_item bg-center bg-cover bg-repeat t-center w-20 relative over"
+        >
+          <div
+            class="carrousel__container_item_container w-100 t-left bottom left absolute font-col-2"
+          >
+            <h3
+              class="carrousel__container_item_container_title font-col-2 font-700 flex flex-ai-c flex-jc-sb"
+            >
+              <span class="carrousel__container_item_container_title_span"
+                >Riverfront Residences</span
+              ><i
+                class="fa-light fa-circle-info carrousel__container_item_container_title_icon none pointer font-m"
+                id="btn5"
+              ></i>
+            </h3>
+            <p
+              class="carrousel__container_item_container_paragraph"
+              id="paragraph5"
+            >
+              Type de bâtiment : Immeuble d'habitation<br />
+              Emplacement : San Francisco<br />
+              Cabinet d'architecte : Smith &amp; Jones Architects<br />
+              Nombre d'étages : 6
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="project bg-col-2 font-col-1" id="project">
+      <div class="project__video">
+        <video
+          src="assets/img/video.webm"
+          class="project__video_video relative w-100"
+          muted
+          autoplay
+          loop
+          controls
+        id="video"></video>
+      </div>
+      <div class="project__header">
+        <h2 class="project__header_title font-xl relative font-col-1">
+          Votre Projet.
+        </h2>
+        <p class="project__header_paragraph t-justify">
+          Découvrez notre expertise en matière de construction et notre capacité
+          à accompagner nos clients dans la réalisation de leurs projets. Nous
+          sommes spécialisés dans la construction de bâtiments résidentiels,
+          commerciaux et industriels, et nous sommes là pour vous aider à
+          concrétiser votre vision de construction.
+        </p>
+      </div>
+      <div class="project__content">
+        <div class="project__content_container">
+          <div class="project__content_container_bloc grid">
+            <div class="project__content_container_bloc_steps flex flex-jc-c">
+              <p
+                class="project__content_container_bloc_steps_paragraph flex flex-ai-c"
+              >
+                <i
+                  class="fa-solid fa-circle project__content_container_bloc_steps_paragraph_icons relative font-m"
+                ></i>
+                Conception
+              </p>
+              <p
+                class="project__content_container_bloc_steps_paragraph flex flex-ai-c"
+              >
+                <i
+                  class="fa-solid fa-circle project__content_container_bloc_steps_paragraph_icons relative font-m"
+                ></i>
+                Préparation
+              </p>
+              <p
+                class="project__content_container_bloc_steps_paragraph flex flex-ai-c"
+              >
+                <i
+                  class="fa-solid fa-circle project__content_container_bloc_steps_paragraph_icons relative font-m"
+                ></i>
+                Construction
+              </p>
+              <p
+                class="project__content_container_bloc_steps_paragraph flex flex-ai-c"
+              >
+                <i
+                  class="fa-solid fa-circle project__content_container_bloc_steps_paragraph_icons relative font-m"
+                ></i>
+                Certification
+              </p>
+            </div>
+            <div class="project__content_container_bloc_content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+                accusamus rerum atque fugit non, fugiat ipsum et iure, enim
+                doloremque, tempora consectetur expedita aperiam perferendis
+                officia sapiente veritatis itaque eaque! Eveniet eligendi ex
+                nemo reprehenderit repudiandae! Laborum accusantium, velit
+                laboriosam quae deleniti quasi, nulla eaque fugit minima nobis
+                mollitia tempora hic dolores, delectus dolorum. Excepturi
+                corrupti earum deserunt, provident quo eos possimus illum
+                reiciendis minima alias eaque aut dolorum vero inventore totam
+                placeat.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project__content_container w-100">
+          <div
+            class="project__content_container_slider w-100 over relative bg-col-1 font-col-2"
+            id="slider"
+          >
+            <h3 class="project__content_container_slider_title">
+              Ils parlent de nous
+            </h3>
+
+            <div
+              class="project__content_container_slider_bloc slide w-100 flex flex-ai-c"
+            >
+              <img
+                src="assets/img/comments-1.webp"
+                alt=""
+                class="project__content_container_slider_bloc_img"
+              />
+              <div class="project__content_container_slider_bloc_container">
+                <h3
+                  class="project__content_container_slider_bloc_container_title font-l"
+                >
+                  <i
+                    class="fa-solid fa-user project__content_container_slider_bloc_container_title_icon"
+                  ></i>
+                  Antoine Martin
+                </h3>
+                <p
+                  class="project__content_container_slider_bloc_container_paragraph"
+                >
+                  <sup
+                    ><i
+                      class="fa-solid fa-quote-left project__content_container_slider_bloc_container_paragraph_icon"
+                    ></i
+                  ></sup>
+                  Je recommande vivement cette entreprise pour leur
+                  professionnalisme et leur expertise dans le domaine de la
+                  construction.
+                  <sup
+                    ><i
+                      class="fa-solid fa-quote-right project__content_container_slider_bloc_container_paragraph_icon"
+                    ></i
+                  ></sup>
+                </p>
+                <div
+                  class="project__content_container_slider_bloc_container_rate"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="project__content_container_slider_bloc slide w-100 flex flex-ai-c"
+            >
+              <img
+                src="assets/img/comments-2.webp"
+                alt=""
+                class="project__content_container_slider_bloc_img"
+              />
+              <div class="project__content_container_slider_bloc_container">
+                <h3
+                  class="project__content_container_slider_bloc_container_title font-l"
+                >
+                  <i
+                    class="fa-solid fa-user project__content_container_slider_bloc_container_title_icon"
+                  ></i>
+                  Claire Lefebvre
+                </h3>
+                <p
+                  class="project__content_container_slider_bloc_container_paragraph"
+                >
+                  <sup
+                    ><i
+                      class="fa-solid fa-quote-left project__content_container_slider_bloc_container_paragraph_icon"
+                    ></i
+                  ></sup>
+                  J'ai été agréablement surprise par leur rapidité d'exécution
+                  sans pour autant compromettre la qualité de leur travail.
+                  <sup
+                    ><i
+                      class="fa-solid fa-quote-right project__content_container_slider_bloc_container_paragraph_icon"
+                    ></i
+                  ></sup>
+                </p>
+                <div
+                  class="project__content_container_slider_bloc_container_rate"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="project__content_container_slider_bloc slide w-100 flex flex-ai-c"
+            >
+              <img
+                src="assets/img/comments-3.webp"
+                alt=""
+                class="project__content_container_slider_bloc_img"
+              />
+              <div class="project__content_container_slider_bloc_container">
+                <h3
+                  class="project__content_container_slider_bloc_container_title font-l"
+                >
+                  <i
+                    class="fa-solid fa-user project__content_container_slider_bloc_container_title_icon"
+                  ></i>
+                  Alice Dupont
+                </h3>
+                <p
+                  class="project__content_container_slider_bloc_container_paragraph"
+                >
+                  <sup
+                    ><i
+                      class="fa-solid fa-quote-left project__content_container_slider_bloc_container_paragraph_icon"
+                    ></i
+                  ></sup>
+                  J'ai été impressionnée par leur souci du détail et leur
+                  capacité à anticiper les problèmes avant qu'ils ne
+                  surviennent.
+                  <sup
+                    ><i
+                      class="fa-solid fa-quote-right project__content_container_slider_bloc_container_paragraph_icon"
+                    ></i
+                  ></sup>
+                </p>
+                <div
+                  class="project__content_container_slider_bloc_container_rate"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              class="project__content_container_slider_bloc slide w-100 flex flex-ai-c"
+            >
+              <img
+                src="assets/img/comments-4.webp"
+                alt=""
+                class="project__content_container_slider_bloc_img"
+              />
+              <div class="project__content_container_slider_bloc_container">
+                <h3
+                  class="project__content_container_slider_bloc_container_title font-l"
+                >
+                  <i
+                    class="fa-solid fa-user project__content_container_slider_bloc_container_title_icon"
+                  ></i
+                  >Sophie Laurent
+                </h3>
+                <p
+                  class="project__content_container_slider_bloc_container_paragraph"
+                >
+                  <sup
+                    ><i
+                      class="fa-solid fa-quote-left project__content_container_slider_bloc_container_paragraph_icon"
+                    ></i
+                  ></sup>
+                  Leur équipe a été très attentive à mes besoins et a fait en
+                  sorte que le projet se déroule sans encombre du début à la
+                  fin.
+                  <sup
+                    ><i
+                      class="fa-solid fa-quote-right project__content_container_slider_bloc_container_paragraph_icon"
+                    ></i
+                  ></sup>
+                </p>
+                <div
+                  class="project__content_container_slider_bloc_container_rate"
+                >
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="project__content_container_slider_btn absolute flex flex-jc-sb w-100 pointer"
+            >
+              <div
+                class="project__content_container_slider_btn_prev font-l"
+                onclick="plusSlides(-1)"
+              >
+                <i class="fa fa-chevron-left"></i>
+              </div>
+              <div
+                class="project__content_container_slider_btn_next font-l"
+                onclick="plusSlides(1)"
+              >
+                <i class="fa fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="footer w-100 bg-col-2 font-col-2 flex flex-column flex-ai-c flex-jc-c"
+      id="footer"
+    >
+      <h1 class="footer__logo font-xl font-col-1 font-600 t-center">
+        TerraQuake | Builders
+      </h1>
+      <div class="footer__container flex-ai-b grid">
+        <div class="footer__container_social flex flex-column flex-ai-e">
+          <i
+            class="fa-brands fa-facebook-f footer__container_social_icon grid place bg-col-1 font-col-2 aspect pointer"
+          ></i>
+          <i
+            class="fa-brands fa-twitter footer__container_social_icon grid place bg-col-1 font-col-2 aspect pointer"
+          ></i>
+          <i
+            class="fa-brands fa-instagram footer__container_social_icon grid place bg-col-1 font-col-2 aspect pointer"
+          ></i>
+          <i
+            class="fa-brands fa-linkedin-in footer__container_social_icon grid place bg-col-1 font-col-2 aspect pointer"
+          ></i>
+          <i
+            class="fa-brands fa-google-plus-g footer__container_social_icon grid place bg-col-1 font-col-2 aspect pointer"
+          ></i>
+        </div>
+        <nav class="footer__container_navbar">
+          <menu
+            class="footer__container_navbar_list flex flex-column flex-ai-s flex-jc-c"
+          >
+            <li class="footer__container_navbar_list_items flex flex-ai-c">
+              <i
+                class="fa-regular fa-house-chimney footer__container_navbar_list_icons font-col-1"
+              ></i
+              ><a
+                href="#top"
+                class="footer__container_navbar_list_items_links font-m font-col-1 font-600"
+                >Accueil</a
+              >
+            </li>
+            <li class="footer__container_navbar_list_items flex flex-ai-c">
+              <i
+                class="fa-regular fa-address-card footer__container_navbar_list_icons font-col-1"
+              ></i
+              ><a
+                href="#about"
+                class="footer__container_navbar_list_items_links font-m font-col-1 font-600"
+                >A Propos</a
+              >
+            </li>
+            <li class="footer__container_navbar_list_items flex flex-ai-c">
+              <i
+                class="fa-regular fa-handshake footer__container_navbar_list_icons font-col-1"
+              ></i
+              ><a
+                href="#prestations"
+                class="footer__container_navbar_list_items_links font-m font-col-1 font-600"
+                >Prestations</a
+              >
+            </li>
+            <li class="footer__container_navbar_list_items flex flex-ai-c">
+              <i
+                class="fa-regular fa-trophy footer__container_navbar_list_icons font-col-1"
+              ></i
+              ><a
+                href="#realisations"
+                class="footer__container_navbar_list_items_links font-m font-col-1 font-600"
+                >Réalisations</a
+              >
+            </li>
+            <li class="footer__container_navbar_list_items flex flex-ai-c">
+              <i
+                class="fa-regular fa-envelope footer__container_navbar_list_icons font-col-1"
+              ></i
+              ><a
+                href="#footer"
+                class="footer__container_navbar_list_items_links font-m font-col-1 font-600"
+                id="footer_contact"
+                >Contact</a
+              >
+            </li>
+          </menu>
+        </nav>
+        <div class="footer__container_newsletter">
+          <label
+            for="newsletter"
+            class="footer__container_newsletter_label block font-s font-600 font-col-1"
+            >Pour en savoir plus, inscrivez vous à notre Newsletter.</label
+          >
+          <div class="footer__container_newsletter_container flex">
+            <input
+              type="email"
+              name="newsletter"
+              id="newsletter"
+              class="footer__container_newsletter_container_input bg-col-2 font-col-1"
+              placeholder="Votre adresse email"
+            />
+            <button
+              class="footer__container_newsletter_container_cta font-col-2 bg-col-1 pointer"
+            >
+              S'inscrire
+            </button>
+          </div>
+        </div>
+      </div>
+      <a href="#top" class="footer__goup"
+        ><i class="fa-thin fa-chevron-double-up footer__goup_icon"></i
+      ></a>
+      <p class="footer__credits t-center bg-col-1 font-col-2">
+        &copy; 2023. Tous droits réservés.
+        <span class="footer__credits_span font-600">TerraQuake | Builders</span
+        >, par
+        <span class="footer__credits_span font-600">Alexandre TREVARIN.</span>
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

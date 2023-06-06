@@ -1,0 +1,96 @@
+.prestations
+  padding: 5rem
+
+  @media screen and (max-width: 700px)
+    padding-inline: 2rem
+
+  &__container
+
+    &_bloc
+      padding: 2rem
+
+      &_title
+        padding-block: 1rem
+        margin-bottom: 1rem
+
+        @media screen and (max-width: 992px)
+        font-size: $font-xlg
+
+        @media screen and (max-width: 450px)
+        font-size: $font-xlg
+
+        &::after
+          content: ''
+          position: absolute
+          width: 30%
+          height: 3px
+          background-color: $white
+          right: -25%
+          top: 50%
+          border-radius: 30px
+          box-shadow: 0 0 15px 1px $white
+
+        &::before
+          content: ''
+          position: absolute
+          width: 30%
+          height: 3px
+          background-color: $white
+          left: -25%
+          top: 50%
+          border-radius: 30px
+          box-shadow: 0 0 15px 1px $white
+
+      &_paragraph
+        padding-inline: 25%
+        @media screen and (max-width: 992px)
+          padding: 0
+
+
+    &_cards
+      gap: 4%
+
+      &_card
+        transition: transform 300ms ease-in-out
+        border-radius: 10px
+
+        @media screen and (max-width: 992px)
+          display: flex
+          justify-content: center
+          align-items: center
+          gap: 2rem
+
+        @media screen and (max-width: 700px)
+          flex-direction: column
+
+        &::after
+          content: '\2b'
+          color: $white
+          display: flex
+          justify-content: center
+          align-items: center
+          font-size: 2rem
+          font-family: "Font Awesome 6 Pro"
+          font-weight: 900
+          padding-block: 1rem
+          position: absolute
+          bottom: 0
+          left: 50%
+          width: 30%
+          height: 40px
+          border-top-left-radius: 10px
+          border-top-right-radius: 10px
+          background-color: $black
+          transform: translateX(-50%)
+
+        &_container
+          &_img
+            height: 250px
+
+          &_paragraph
+            padding: 1rem
+            transition: all 1s ease
+            margin-bottom: 2rem
+
+            @media screen and (max-width: 992px)
+              padding: 1rem 1rem 5rem 1rem

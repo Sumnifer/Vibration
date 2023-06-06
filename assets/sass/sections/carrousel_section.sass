@@ -1,0 +1,103 @@
+.carrousel
+  padding: 5rem
+  gap: 1rem
+
+  @media screen and (max-width: 992px)
+    padding: 1rem
+
+  &__title
+    padding: 2rem
+    line-height: 7rem
+    padding-block: 1rem
+    margin-bottom: 4rem
+
+    &::after
+      content: ''
+      position: absolute
+      width: 40%
+      height: 3px
+      background-color: $secondary
+      bottom: 0
+      left: 30%
+      box-shadow: 0 0 15px 1px $secondary
+
+  &__container
+    gap: 1rem
+
+    @media screen and (max-width: 992px)
+      flex-direction: column
+
+    &_item
+      height: 60vh
+      transition: all 1000ms ease
+      z-index: 3
+      border-radius: 10px
+
+      @media screen and (max-width: 992px)
+        width: 100%
+        height: 40vh
+
+      &:first-of-type
+        background-image: url(../img/image-1.webp)
+
+      &:nth-of-type(2)
+        background-image: url(../img/image-2.webp)
+
+      &:nth-of-type(3)
+        background-image: url(../img/image-3.webp)
+
+      &:nth-of-type(4)
+        background-image: url(../img/image-4.webp)
+
+      &:last-of-type
+        background-image: url(../img/image-5.webp)
+
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.20)
+        top: 0
+        left: 0
+        z-index: -2
+
+      &:hover
+        width: 100%
+
+
+        .carrousel__container_item_container
+          bottom: 0
+          left: 0
+          transform: translateY(0)
+          opacity: 1
+
+      &_container
+        padding: 1rem
+        opacity: 0
+        transform: translateY(100%)
+        background-color: rgba(0, 0, 0, 0.90)
+        transition-delay: 700ms
+        transition-property: transform
+        transition-duration: 1000ms
+
+        @media screen and (max-width: 992px)
+          transform: translateX(0)
+          transition-property: transform
+          transition-duration: 0s
+          transition-delay: 0s
+          display: block
+          opacity: 1
+
+        &_title
+
+          &_icon
+            z-index: 10
+
+            @media screen and (max-width: 992px)
+              display: block
+
+        &_paragraph
+          font-size: 0.8rem
+          @media screen and (max-width: 992px)
+            display: none

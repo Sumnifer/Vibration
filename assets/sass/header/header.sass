@@ -1,0 +1,218 @@
+.header
+  margin-bottom: 5%
+
+  @include min(large)
+    margin-bottom: 5%
+    height: 100%
+
+  @include max(small)
+    padding-bottom: 2rem
+
+  &__nav
+    padding-inline: 10%
+    z-index: 100
+
+    @media screen and (max-width: 992px)
+      padding-block: 1rem
+
+
+    &_logo
+      font-size: 2rem
+
+      @media screen and (max-width: 992px)
+        font-size: $font-lg
+
+
+    &_navbar
+      min-height: 80px
+      padding: 0
+      margin: 0
+      transition: transform 1s ease
+
+      @media screen and (max-width: 992px)
+        flex-direction: column
+        position: absolute
+        top: 0
+        right: 0
+        width: 40%
+        margin-top: 55px
+        transform: translateX(100%)
+        background-color: $primary
+        backdrop-filter: blur(10px)
+        z-index: 10
+
+      @media screen and (max-width: 550px)
+        width: 100%
+
+      &_items
+        padding: 1rem 0
+        transition: all 800ms ease
+
+        @media screen and (max-width: 992px)
+          justify-content: flex-start
+          padding: 1rem
+          width: 100%
+          height: 60px
+          color: $secondary
+          border-bottom: 1px solid $secondary
+
+          &::after
+            display: none
+
+        &::after
+          content: ''
+          position: absolute
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          transform: translateY(-100%)
+          background-color: $white
+          z-index: 2
+          transition: transform 800ms ease
+
+        &_icon
+          @media screen and (max-width: 992px)
+            display: block
+
+
+        &_link
+          transition: all 800ms ease
+          padding: 1rem
+          z-index: 3
+
+          @media screen and (max-width: 1170px)
+            padding-inline: 1rem
+
+          @media screen and (max-width: 992px)
+            color: $secondary
+            font-weight: 700
+            &::after
+              display: none
+
+          &::after
+            content: ''
+            position: absolute
+            width: 0
+            height: 2px
+            bottom: 0
+            left: 25%
+            right: 25%
+            background-color: $primary
+            opacity: 0
+            transition: width 1s 500ms ease, opacity 1s 0s ease
+
+        &:hover
+          &::after
+            transform: translateY(0)
+
+          .header__nav_navbar_items_link
+            color: $primary
+            @media screen and (max-width: 992px)
+              color: $secondary
+
+          .header__nav_navbar_items_link::after
+            width: 50%
+            opacity: 100
+
+      &_contact
+        @media screen and (max-width: 992px)
+          background-color: $secondary
+          width: 100%
+          position: relative
+
+          &::after
+            content: 'Contact'
+            position: absolute
+            left: 3rem
+            top: 50%
+            transform: translateY(-50%)
+            color: white
+            font-size: 1rem
+            font-weight: 500
+            @media screen and (max-width: 992px)
+            color: $primary
+
+        &_contact
+          padding: 1rem
+
+
+          &_icon
+            color: $secondary
+            padding-block: 1rem
+            @media screen and (max-width: 992px)
+              color: $primary
+
+    &_icons
+      gap: 0.2rem
+      width: 25px
+
+      @media screen and (max-width: 992px)
+        display: flex
+
+      &_items
+        width: 25px
+        height: 3px
+
+  &__content
+    background-image: url(../img/header.webp)
+    padding: 30vh 10%
+    height: 100vh
+    z-index: 3
+
+    @media screen and (max-width: 992px)
+      height: auto
+
+
+
+    &::after
+      content: ''
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      background-color: rgba(18, 18, 18, 0.10)
+      width: 100%
+      height: 100%
+      z-index: -2
+
+
+    @media screen and (max-width: 992px)
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 8rem 2rem
+
+    @media screen and (max-width: 450px)
+      box-shadow: 5px 5px 5px $black
+
+    &_title
+      margin-bottom: 1rem
+      margin-right: 20%
+
+      @media screen and (max-width: 992px)
+        margin-right: 0
+
+      @media screen and (max-width: 450px)
+        font-size: $font-xlg
+
+    &_paragraph
+      margin-right: 50%
+      margin-bottom: 2rem
+
+      @media screen and (max-width: 992px)
+        margin-right: 0
+
+      @media screen and (max-width: 450px)
+        font-size: $font-sm
+
+    &_cta
+      padding: 1rem 2rem
+      transition: all 1s ease
+
+      &:hover
+        background-color: $white
+        color: $primary
+
+      @media screen and (max-width: 992px)
+        padding: 0.5rem 2rem

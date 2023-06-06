@@ -1,0 +1,57 @@
+.about
+  padding: 5rem
+  gap: 4rem
+  border-top-left-radius: 30px
+  border-top-right-radius: 30px
+
+  @media screen and (max-width: 992px)
+    flex-direction: column
+    padding: 2rem
+    margin: 0
+
+  &__container
+    width: 60%
+    padding: 2rem
+    border-radius: 20px
+    transition: transform 200ms ease-in-out
+
+    &:hover
+      transform: scale(1.01)
+
+    @media screen and (max-width: 992px)
+      width: 100%
+
+    &_title
+      margin-bottom: 1rem
+      padding-block: 1rem
+
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        width: 20%
+        height: 3px
+        background-color: $white
+        bottom: 0
+        left: 0
+        box-shadow: 0 0 15px 1px $white
+
+      @media screen and (max-width: 450px)
+        font-size: $font-lg
+
+
+
+  &__img_container
+    height: 100%
+    gap: 1rem
+    z-index: 3
+
+    @media screen and (max-width: 992px)
+      width: 100%
+      object-fit: cover
+
+    &_img
+      opacity: 70%
+
+      @media screen and (max-width: 450px)
+        height: auto

@@ -1,0 +1,255 @@
+::-webkit-scrollbar
+  background-color: $primary
+  width: 10px
+
+::-webkit-scrollbar-thumb
+  background-color: $white
+  border-radius: 10px
+  max-height: 20px
+
+::-webkit-scrollbar-track
+  margin-top: 10px
+  margin-bottom: 10px
+
+body
+  font-family: Neue, sans-serif
+  font-weight: 500
+  overflow-x: hidden
+  background-color: $primary
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  position: relative
+
+//background
+
+.bg-col-1
+  background-color: $primary
+.bg-col-2
+  background-color: $secondary
+.bg-cover
+  background-size: cover
+.bg-center
+  background-position: center
+.bg-repeat
+  background-repeat: no-repeat
+
+//overflow
+
+.over
+  overflow: hidden
+.over-x
+  overflow-x: hidden
+.over-y
+  overflow-y: hidden
+
+//position
+
+.relative
+  position: relative
+.absolute
+  position: absolute
+.fixed
+  position: fixed
+.sticky
+  position: sticky
+
+//width
+.w-100
+  width: 100%
+.w-50
+  width: 50%
+.w-20
+  width: 20%
+
+//font - size
+
+.font-s
+  font-size: $font-sm
+.font-m
+  font-size: $font-med
+.font-l
+  font-size: $font-lg
+.font-xl
+  font-size: $font-xlg
+.font-xxl
+  font-size: 4.37rem
+.font-uppercase
+  text-transform: uppercase
+
+.font-500
+  font-weight: 500
+.font-600
+  font-weight: 600
+.font-700
+  font-weight: 700
+.font-900
+  font-weight: 900
+
+//font-color
+
+.font-col-1
+  color: $primary
+.font-col-2
+  color: $secondary
+
+//text-align
+
+.t-center
+  text-align: center
+.t-justify
+  text-align: justify
+.t-left
+  text-align: left
+.t-right
+  text-align: right
+
+  // padding
+.padding
+  &--py
+    padding-block: 4.375rem
+  &--px
+    padding-inline: 1.5rem
+  &--pt
+    padding-top: 4.375rem
+
+  &--pr
+    padding-right: 1.5rem
+  &--pb
+    padding-bottom: 4.375rem
+  &--pl
+    padding-left: 1.5rem
+
+  // margin
+.margin
+  &--my
+    margin-block: 4.375rem
+
+  &--mx
+    margin-inline: 1.5rem
+  &--mt
+    margin-top: 4.375rem
+  &--mr
+    margin-right: 1.5rem
+  &--mb
+    margin-bottom: 4.375rem
+  &--ml
+    margin-left: 1.5rem
+
+// Grid
+
+.grid
+  display: grid
+  &--gc
+    grid-template-columns: repeat(3, 1fr)
+    @media screen and (max-width: 992px)
+      grid-template-columns: 1fr
+.place
+  place-items: center
+
+// Flexbox
+
+.flex
+  display: flex
+
+  &-jc-sb
+    justify-content: space-between
+
+  &-jc-c
+    justify-content: center
+
+  &-ai-c
+    align-items: center
+
+  &-ai-b
+    align-items: baseline
+
+  &-ai-e
+    align-items: flex-end
+
+  &-ai-s
+    align-items: flex-start
+
+  &-as-s
+    align-self: flex-start
+
+  &-as-e
+    align-self: flex-end
+
+  &-column
+    flex-direction: column
+
+// Cursor
+.pointer
+  cursor: pointer
+
+// Absolute
+.left
+  left: 0
+.right
+  right: 0
+.top
+  top: 0
+.bottom
+  bottom: 0
+.inset
+  inset: 0
+
+// Display
+.block
+  display: block
+.none
+  display: none
+
+// Images
+.cover
+  object-fit: cover
+.contain
+  object-fit: contain
+
+// Height
+.auto
+  height: auto
+.h-100
+  height: 100%
+.aspect
+  aspect-ratio: 1
+
+
+.top_top_button
+  position: fixed
+  bottom: 12%
+  right: 0
+  transform: translateX(70px)
+  padding: 1rem
+  background-color: $white
+  color: $primary
+  transition: transform 500ms ease
+  border-top-left-radius: 10px
+  border-bottom-left-radius: 10px
+  @media screen and (max-width: 992px)
+    display: none
+
+.top_top_button:hover
+  transform: translateX(0)
+
+.top_top_button > i
+  margin-right: 1rem
+
+
+.container
+  margin: 0 10%
+
+.display
+  display: block !important
+
+.navbar_display
+  display: flex !important
+  transform: translateX(0) !important
+  transition: all 1s ease !important
+
+.animate_left::before
+  animation: animate_left 2s
+
+.animate_right::after
+  animation: animate_right 2s

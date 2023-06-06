@@ -1,0 +1,37 @@
+// Font Sizes (Clamp pour polices responsive)
+$font-sm: clamp(0.875rem, calc(0.77rem + 0.3vw), 1rem) // 14px, min: 12.56px, max: 16px
+$font-med: clamp(1.125rem, calc(0.77rem + 0.5vw), 1.5rem) // 18px, min: 14.35px, max: 21px
+$font-lg: clamp(1.25rem, calc(0.77rem + 0.6vw), 1.75rem) // 20px, min: 16.01px, max: 24.5px
+$font-xlg: clamp(3.25rem, calc(1.54rem + 1.5vw), 5rem) // 52px, min: 32.35px, max: 74.5px
+
+
+// Colors
+$primary: hsl(0, 0%, 0%)
+$secondary: hsl(0, 0%, 100%)
+$black: hsl(0, 0%, 0%)
+$white: hsl(0, 0%, 100%)
+
+// Breakpoints
+
+// 639px, 1023px, 1399px
+$breakpoints-max: ("small": "39.9375em", "medium": "63.9375em", "large": "87.4375em")
+// 640px, 1024px, 1400px
+$breakpoints-min: ("medium": "40em", "large": "64em", "xlarge": "87.5em")
+
+//Queries
+@mixin max($size) // Tablette vers Mobile
+  @media screen and (max-width: map-get($breakpoints-max, $size))
+    @content
+@mixin min($size) // Tablette vers Mobile
+  @media screen and (min-width: map-get($breakpoints-min, $size))
+    @content
+
+
+
+
+
+
+
+
+
+
